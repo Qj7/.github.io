@@ -12,7 +12,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <script src="https://kit.fontawesome.com/89306d984c.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.5.3/jspdf.debug.js" integrity="sha384-NaWTHo/8YCBYJ59830LTz/P4aQZK1sS0SneOgAvhsIl3zBu8r9RevNg5lHCHAuQ/" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+    <script src="https://html2canvas.hertzen.com/dist/html2canvas.min.js"></script>
     <link href=' http://fonts.googleapis.com/css?family=Droid+Sans' rel='stylesheet' type='text/css'>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-mfizz/2.4.1/font-mfizz.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -225,11 +226,14 @@
     </button>
     <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav">
+
+            <!--<a href="javascript:htmlToPdf()">Download File As PDF</a>-->
+
             <li class="nav-item">
                 <a class="nav-link js-scroll-trigger" href="#about">General information</a>
             </li>
             <li class="nav-item">
-                <a class="nav-link js-scroll-trigger" href="#experience">Achievements and experience</a>
+                <a class="nav-link js-scroll-trigger" href="#experience">Experience</a>
             </li>
             <li class="nav-item">
                 <a class="nav-link js-scroll-trigger" href="#education">Education and languages</a>
@@ -247,128 +251,107 @@
 <div class="container-fluid p-0">
 
     <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="about">
-        <div class="w-100">
-            <h2 class="mb-5">General information</h2>
-            <div class="row">
-                <div class="col-3"><strong>Full name:</strong></div>
-                <div class="col float-left">Dolgiy Vladimir</div>
-            </div>
-            <div class="row">
-                <div class="col-3"><strong>Age:</strong></div>
-                <div class="col float-left">30 years old</div>
-            </div>
-            <div class="row">
-                <div class="col-3"><strong>Lives in:</strong></div>
-                <div class="col float-left">
-                    <a target="_blank" rel="noopener noreferrer" class="" href="https://goo.gl/maps/DTTKb7MunePw9BGP9">Italy, Sicily, Bagheria</a>
+            <div class="w-100">
+                <h2 class="mb-5">General information</h2>
+                <div class="toPrint">
+                    <div class="row">
+                        <div class="col-3"><strong>Full name:</strong></div>
+                        <div class="col float-left">Dolgiy Vladimir</div>
+                    </div>
+                    <div class="row">
+                        <div class="col-3"><strong>Age:</strong></div>
+                        <div class="col float-left">30 years old</div>
+                    </div>
+                    <div class="row">
+                        <div class="col-3"><strong>Lives in:</strong></div>
+                        <div class="col float-left">
+                            <a target="_blank" rel="noopener noreferrer" class="" href="https://goo.gl/maps/DTTKb7MunePw9BGP9">Italy, Sicily, Bagheria</a>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-3"><strong>Languages:</strong></div>
+                        <div class="col float-left">Ukranian, Russian, English (B1), Italian (Beginner) </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-3"><strong>Salary (montly):</strong></div>
+                        <div class="col float-left">from 4000$</div>
+                    </div>
+                    <div class="row">
+                        <div class="col-3"><strong>Schedule:</strong></div>
+                        <div class="col float-left">Full-time employment or full-time contract (prefered)</div>
+                    </div>
+                    <div class="row">
+                        <div class="col-3"><strong>Work format:</strong></div>
+                        <div class="col float-left">Office or remote. Ready to relocate</div>
+                    </div>
+                </div>
+
+                <div class="social-icons mt-5 ignore">
+                    <a href="mailto:dolgiy.v.v@gmail.com">
+                        <i class="fa fa-envelope"></i>
+                    </a>
+                    <a href="https://t.me/Sawyeeeer">
+                        <i class="fab fa-telegram-plane"></i>
+                    </a>
+                    <a href="https://gitlab.com/Qj7">
+                        <i class="fab fa-gitlab"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/vladimir-dolgiy/">
+                        <i class="fab fa-linkedin"></i>
+                    </a>
                 </div>
             </div>
-            <div class="row">
-                <div class="col-3"><strong>Languages:</strong></div>
-                <div class="col float-left">Ukranian, Russian, English (B1), Italian (Beginner) </div>
-            </div>
-            <div class="row">
-                <div class="col-3"><strong>Salary (montly):</strong></div>
-                <div class="col float-left">from 4000$</div>
-            </div>
-            <div class="row">
-                <div class="col-3"><strong>Schedule:</strong></div>
-                <div class="col float-left">Full-time employment</div>
-            </div>
-            <div class="row">
-                <div class="col-3"><strong>Work format:</strong></div>
-                <div class="col float-left">Office or remote. Ready to relocate</div>
-            </div>
-
-            <div class="social-icons mt-5">
-                <a href="mailto:dolgiy.v.v@gmail.com">
-                    <i class="fa fa-envelope"></i>
-                </a>
-                <a href="https://t.me/Sawyeeeer">
-                    <i class="fab fa-telegram-plane"></i>
-                </a>
-                <a href="https://gitlab.com/Qj7">
-                    <i class="fab fa-gitlab"></i>
-                </a>
-                <a href="https://www.linkedin.com/in/vladimir-dolgiy/">
-                    <i class="fab fa-linkedin"></i>
-                </a>
-            </div>
-
-
-<!--            <h2 class="mb-0">Долгий
-                <span class="text-primary">Владимир Викторович</span>
-            </h2>
-            <div class="subheading mb-5">3542 Berry Street · Cheyenne Wells, CO 80810 · (317) 585-8468 ·
-                <a href="mailto:name@email.com">name@email.com</a>
-            </div>
-            <p class="lead mb-5">I am experienced in leveraging agile frameworks to provide a robust synopsis for high level overviews. Iterative approaches to corporate strategy foster collaborative thinking to further the overall value proposition.</p>
-            <div class="social-icons">
-                <a href="#">
-                    <i class="fab fa-linkedin-in"></i>
-                </a>
-                <a href="#">
-                    <i class="fab fa-github"></i>
-                </a>
-                <a href="#">
-                    <i class="fab fa-twitter"></i>
-                </a>
-                <a href="#">
-                    <i class="fab fa-facebook-f"></i>
-                </a>
-            </div>-->
-        </div>
     </section>
 
     <hr class="m-0">
 
     <section class="resume-section p-3 p-lg-5 d-flex justify-content-center" id="experience">
         <div class="w-100">
-            <h2 class="mb-5">Achievements and experience</h2>
-
-            <div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
-                <div class="resume-content">
-                    <h3 class="mb-0">Keitaro</h3>
-                    <div class="subheading mb-3">RoR developer/ DevOps Engineer</div>
-                    <p>Work with keitaro.io monolith project: Implementation new features, fix bugs, TDD/BDD, CI/CD methodology testing, codereview, pair programming.
-                        Make features for main project, features in bash/ansible installer for clients. Adding new technologies to the environment
-                    </p>
-                    <p>Technology: Ruby On Rails/ Angular/ Ansible/ Bash/ Kubernetes/ Docker, Rspec, Molecule, Postgres, Clickhouse, Rswag etc.</p>
+            <h2 class="mb-5">Experience</h2>
+            <div class="toPrint">
+                <div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
+                    <div class="resume-content">
+                        <h3 class="mb-0">Keitaro</h3>
+                        <div class="subheading mb-3">RoR developer/ DevOps Engineer</div>
+                        <p>Work with keitaro.io monolith project: Implementation new features, fix bugs, TDD/BDD, CI/CD methodology testing, codereview, pair programming.
+                            Make features for main project, features in bash/ansible installer for clients. Adding new technologies to the environment
+                        </p>
+                        <p>Technology: Ruby On Rails/ Angular/ Ansible/ Bash/ Kubernetes/ Docker, Rspec, Molecule, Postgres, Clickhouse, Rswag etc.</p>
+                    </div>
+                    <div class="resume-date text-md-right">
+                        <span class="text-primary">September 2019 - September 2022</span>
+                    </div>
                 </div>
-                <div class="resume-date text-md-right">
-                    <span class="text-primary">September 2019 - September 2022</span>
+
+                <div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
+                    <div class="resume-content">
+                        <h3 class="mb-0">Ukrposhta</h3>
+                        <div class="subheading mb-3">Full-stack developer/ Department head</div>
+                        <p>Building a local city projects. Implement scrum and agile methodology for team. Code review.
+                            Architectural project planning. Create Redmine plugins, development telegram bots, create projects in pure RoR, managing team
+                        </p>
+                        <p>Technology: Ruby On Rails/ Redmine/ Jquery</p>
+                    </div>
+                    <div class="resume-date text-md-right">
+                        <span class="text-primary">August 2017 - September 2019</span>
+                    </div>
+                </div>
+
+                <div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
+                    <div class="resume-content">
+                        <h3 class="mb-0">JetThoughts</h3>
+                        <div class="subheading mb-3">Full-stack developer</div>
+                        <p>Building a platform for tracking and analytics of the performance of high school students in the United States.
+                            My responsibilities included the development of microsevrises and search algorithms, the creation of admin panel features,
+                            data visualization and documentation writing
+                        </p>
+                        <p>Technology: Ruby On Rails/ Jquery</p>
+                    </div>
+                    <div class="resume-date text-md-right">
+                        <span class="text-primary">December 2015 - June 2017</span>
+                    </div>
                 </div>
             </div>
-
-            <div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
-                <div class="resume-content">
-                    <h3 class="mb-0">Укрпошта</h3>
-                    <div class="subheading mb-3">Full-stack developer/ Department head</div>
-                    <p>Building a local city projects. Implement scrum and agile methodology for team. Code review.
-                        Architectural project planning. Create Redmine plugins, development telegram bots, create projects in pure RoR, managing team
-                    </p>
-                    <p>Technology: Ruby On Rails/ Redmine/ Jquery</p>
-                </div>
-                <div class="resume-date text-md-right">
-                    <span class="text-primary">August 2017 - September 2019</span>
-                </div>
-            </div>
-
-            <div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
-                <div class="resume-content">
-                    <h3 class="mb-0">JetThoughts</h3>
-                    <div class="subheading mb-3">Full-stack developer</div>
-                    <p>Building a platform for tracking and analytics of the performance of high school students in the United States.
-                        My responsibilities included the development of microsevrises and search algorithms, the creation of admin panel features,
-                        data visualization and documentation writing
-                    </p>
-                    <p>Technology: Ruby On Rails/ Jquery</p>
-                </div>
-                <div class="resume-date text-md-right">
-                    <span class="text-primary">December 2015 - June 2017</span>
-                </div>
-            </div>
-
         </div>
 
     </section>
@@ -379,10 +362,12 @@
         <div class="w-100">
             <h2 class="mb-5">Education and languages</h2>
 
-            <div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
-                <div class="resume-content">
-                    <div>«DONETSK NATIONAL TECHNICAL UNIVERSITY». Master's degree</div>
-                    <p class="mt-2">Read technical literature fluently. I sometimes experience difficulties with a live dialogue. Improve my english skill with native language speakers and individual lessons with teacher</p>
+            <div class="toPrint">
+                <div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
+                    <div class="resume-content">
+                        <div>«DONETSK NATIONAL TECHNICAL UNIVERSITY». Master's degree</div>
+                        <p class="mt-2">Read technical literature fluently. I sometimes experience difficulties with a live dialogue. Improve my english skill with native language speakers and individual lessons with teacher</p>
+                    </div>
                 </div>
             </div>
         </div>
@@ -480,15 +465,11 @@
             <h2 class="mb-5">Interests and hobbies</h2>
             <p>Travelling, meditaion, sport, books, games</p>
         </div>
-
-
-
-
-
-
     </section>
-
     <hr class="m-0">
+
+    <div id="hided">
+    </div>
 
 </div>
 
@@ -500,8 +481,55 @@
 <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
 
 <script>
+
+    function htmlToPdf() {
+        window.jsPDF = window.jspdf.jsPDF
+        window.html2canvas = html2canvas;
+
+        $('.toPrint').each(function(i, obj){
+            if (i === 0) {
+                $("<h2>General information</h2><br>").appendTo($('#hided'))
+            } else if (i === 1) {
+
+                $("<br><br><h2>Experience</h2><br>").appendTo($('#hided'))
+            } else {
+
+                $("<br><br><h2>Education and languages</h2><br>").appendTo($('#hided'))
+            }
+            $(this).clone().appendTo($('#hided'))
+        });
+
+        //$('.ignore').hide(); //before the addHTML()
+
+        let pdf = new jsPDF('p', 'pt', 'a4');
+        let pWidth = pdf.internal.pageSize.getWidth();
+        let pHeight = pdf.internal.pageSize.getHeight();
+        pdf.html(document.getElementById('hided'), {
+            margin: [15, 0, 0, 15],
+            html2canvas: {
+                width: pWidth / 2
+                //600 is the width of a4 page. 'a4': [595.28, 841.89]
+            },
+            callback: function () {
+                pdf.save("CV_DOLGIY_V.pdf");
+                $('#hidded').hide();
+            }
+        })
+
+/*        pdf.html(document.getElementById('print'), {
+            html2canvas: {
+                scale: 600 / srcwidth
+                //600 is the width of a4 page. 'a4': [595.28, 841.89]
+            },
+            callback: function () {
+                pdf.save("two-by-four.pdf");
+                //$('.ignore').show();
+            }
+        });*/
+    }
+
     (function($) {
-        "use strict"; // Start of use strict
+        "use strict";
 
         // Smooth scrolling using jQuery easing
         $('a.js-scroll-trigger[href*="#"]:not([href="#"])').click(function() {
@@ -527,9 +555,7 @@
             target: '#sideNav'
         });
 
-    })(jQuery); // End of use strict
+    })(jQuery);
 </script>
-
-
 </body>
 </html>
